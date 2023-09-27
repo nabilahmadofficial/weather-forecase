@@ -1,21 +1,52 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #eee; 
+    background: #ffffff;
+    font-family: jost,sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin-top: 70px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ececec
+  }
+  
+  h1 {
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 30px;
   }
   
   .search {
-    padding: 50px 0;
+    
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
   }
   
-  input {
-    width: 300px;
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
   }
   
-  .card {
-    max-width: 600px;
-    margin: 0 auto;
+  button[type="submit"] {
+    padding: 10px 20px; 
+    border: none;
+    background: steelblue;
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
   }
   
-  .card-header {
-    padding: 30px;
+  #weather-data {
+    padding: 20px;
+    border-radius: 4px;
+    background: #eee;
   }
+  
+  /* Additional styles */
