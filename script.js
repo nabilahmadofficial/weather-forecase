@@ -87,6 +87,9 @@ function displayWeather(data) {
   weatherData.innerHTML = weatherHTML;
 }
 
+// ...
+// ...
+
 // Autocomplete
 const input = document.getElementById('search-input');
 const suggestionsList = document.getElementById('suggestions-list');
@@ -108,8 +111,8 @@ input.addEventListener('input', async e => {
             suggestionItem.textContent = city.name;
             suggestionItem.addEventListener('click', () => {
               input.value = city.name;
-              suggestionsList.innerHTML = '';
-              getWeatherByCity(city.name);
+              suggestionsList.innerHTML = ''; // Clear suggestions
+              getWeatherByCity(city.name); // Fetch weather for the selected city
             });
 
             suggestionsList.appendChild(suggestionItem);
@@ -129,6 +132,8 @@ input.addEventListener('input', async e => {
     suggestionsList.style.display = 'none';
   }
 });
+
+// ...
 
 // Hide suggestions when clicking outside the input field
 document.addEventListener('click', e => {
