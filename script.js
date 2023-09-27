@@ -15,10 +15,11 @@ if (lat && lon) {
 // Listen for search
 document.getElementById('weather-form').addEventListener('submit', e => {
   e.preventDefault();
-
+ 
   let city = document.getElementById('search-input').value;
   getWeatherByCity(city);
 });
+
 
 // Get location
 function getLocation() {
@@ -144,3 +145,4 @@ document.addEventListener('click', e => {
     suggestionsList.style.display = 'none';
   }
 });
+
