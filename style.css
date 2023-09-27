@@ -50,4 +50,26 @@ body {
     background: #f3f3f3;
   }
   
+  /* Style for suggestions */
+.suggestions {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1;
+  width: 100%;
+  display: none;
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.suggestions li:hover {
+  background-color: #f2f2f2;
+}
+
   /* Additional styles */

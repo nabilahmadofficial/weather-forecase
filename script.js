@@ -88,11 +88,11 @@ function displayWeather(data) {
 }
 
 // ...
-// ...
 
 // Autocomplete
 const input = document.getElementById('search-input');
 const suggestionsList = document.getElementById('suggestions-list');
+const uniqueCityNames = new Set(); // To store unique city names
 
 input.addEventListener('input', async e => {
   const query = e.target.value;
@@ -105,14 +105,19 @@ input.addEventListener('input', async e => {
       let response = await fetch(url);
       if (response.ok) {
         let data = await response.json();
+        uniqueCityNames.clear(); // Clear the set for new suggestions
         if (data.list && data.list.length > 0) {
           data.list.forEach(city => {
+            uniqueCityNames.add(city.name); // Add unique city names to the set
+          });
+
+          uniqueCityNames.forEach(cityName => {
             const suggestionItem = document.createElement('li');
-            suggestionItem.textContent = city.name;
+            suggestionItem.textContent = cityName;
             suggestionItem.addEventListener('click', () => {
-              input.value = city.name;
+              input.value = cityName;
               suggestionsList.innerHTML = ''; // Clear suggestions
-              getWeatherByCity(city.name); // Fetch weather for the selected city
+              getWeatherByCity(cityName); // Fetch weather for the selected city
             });
 
             suggestionsList.appendChild(suggestionItem);
@@ -132,8 +137,6 @@ input.addEventListener('input', async e => {
     suggestionsList.style.display = 'none';
   }
 });
-
-// ...
 
 // Hide suggestions when clicking outside the input field
 document.addEventListener('click', e => {
