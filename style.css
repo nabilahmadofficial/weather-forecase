@@ -1,6 +1,6 @@
 body {
     background: #ffffff;
-    font-family: jost,sans-serif;
+    font-family: poppins,sans-serif;
   }
   
   .container {
@@ -51,24 +51,26 @@ body {
   }
   
  /* Style for suggestions */
+/* Style for suggestions */
 .suggestions {
   position: absolute;
   background-color: #fff;
-  border: 0.2px solid #ececec;
+  border: 0px solid #ececec;
   border-radius: 5px;
   max-height: 150px;
+  max-width: 725px;
+  width: 100%;
   overflow-y: auto;
   z-index: 1;
   display: none;
-}
-
-/* Adjust the width to match the search box */
-.suggestions.expanded {
-  width: 100%;
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
 }
 
 .suggestions li {
   padding: 10px;
+  max-width: 725px;
+  width: 100%;
   cursor: pointer;
   transition: background-color 0.2s;
 }
