@@ -24,17 +24,14 @@ Before you begin, ensure you have the following:
 <h5>Changing the API Key</h5>
 To use your own OpenWeatherMap API key, follow these steps:
 1. Obtain an API key from OpenWeatherMap.<br>
-2. Open the script.js file in a text editor.
-3. Locate the API_KEY variable at the top of the file.
-4. Replace the existing API key with your own.
-5. Save the script.js file.
+2. Open the script.js file in a text editor.<br>
+3. Locate the API_KEY variable at the top of the file.<br>
+4. Replace the existing API key with your own.<br>
+5. Save the script.js file.<br>
 6. Reload the index.html file in your web browser.
 
 <h5>Contributing</h5>
 Contributions to WeatherNow are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or create a pull request.
-
-<h5>License</h5>
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 <h5>Acknowledgments</h5>
 Weather data provided by OpenWeatherMap.
