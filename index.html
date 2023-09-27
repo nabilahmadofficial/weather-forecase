@@ -1,33 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Weather Forecast App</title>
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Added Bootstrap and Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
-</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<body>
+<!-- Search form -->
+<div class="search">
+  <form class="form-inline justify-content-center">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search for a city" id="search-input">
+    <button class="btn btn-primary my-2 my-sm-0" type="submit" id="search-button">Search</button>
+  </form>
+</div>
 
-  <div class="container">
-
-    <h1>Weather App</h1>
-
-    <div class="search">
-      <form>
-        <input type="text" placeholder="Search for a city" id="search-input">
-        <button type="submit" id="search-button">Search</button>  
-      </form>
-    </div>
-
-    <div id="weather-data">
-      <!-- weather data will be injected here -->
-    </div>
-
+<!-- Weather data -->
+<div class="card text-white bg-primary mt-5">
+  <div class="card-header" id="weather-data">
+    <!-- weather data injected here -->
   </div>
-
-  <script src="script.js"></script>
-
-</body>
-</html>
+</div>
